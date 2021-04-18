@@ -1,0 +1,24 @@
+cols:
+  # take the subset of the columns
+  take:
+    - Date
+    - Time
+    - Voltage
+    - Global_active_power
+    - Global_reactive_power
+    - Global_intensity
+  # rename the column names for brevity
+  rename:
+    Date: date
+    Time: time
+    Voltage: V
+    Global_active_power: Pa
+    Global_reactive_power: Pr
+    Global_intensity: I
+  # column order for clarity
+  order:
+    - datetime
+    - Pr
+    - Pa
+    - I
+    - V
