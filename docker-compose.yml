@@ -1,0 +1,17 @@
+version: "3"
+services:
+  dev:
+    container_name: dev
+    image: dev:1.0
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        workdir: /home/work
+    restart: always
+    tty: true
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/work
